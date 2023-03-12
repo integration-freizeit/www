@@ -1,0 +1,72 @@
+$primary: #219ebc;
+$secondary: #8ecae6;
+$success: #02fd95;
+$info: #26b6d9;
+$warning: #fb8500;
+$danger: #ff004c;
+$light: #e0e8eb;
+$dark: #10394d;
+
+$font-size-base: 1.1rem;
+
+@import '../bootstrap/bootstrap.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .mb-3;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .mt-5;
+}
+
+.card-title {
+    @extend .mt-0;
+}
+
+.card .card-title .stretched-link {
+    text-decoration: none;
+}
+
+.card .card-title .stretched-link:hover {
+    text-decoration: underline;
+}
+
+.step {
+    @extend .mb-3, .row;
+
+    .step-header {
+        @extend .col-2, .mx-3, .text-center, .text-white;
+        background-color: $warning;
+        border-radius: 100%;
+        height: 3.5rem;
+        width: 3.5rem;
+
+        i {
+            @extend .fs-2;
+            line-height: 3.5rem;
+        }
+    }
+
+    .step-text {
+        @extend .col-10;
+    }
+}

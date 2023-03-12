@@ -1,0 +1,21 @@
+baseURL: "https://integration-freizeit.ch/"
+languageCode: "de-ch"
+title: "Integration in der Freizeit"
+cleanDestinationDir: true
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+  - sitemap
+
+menu:
+  header:
+    - name: Teilnehmende
+      url: /teilnehmende/
+      weight: 1
+    - name: Vereine
+      url: /vereine/
+      weight: 2
+    - name: Über uns
+      url: /ueber-uns/
+      weight: 3
