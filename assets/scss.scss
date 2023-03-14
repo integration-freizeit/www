@@ -21,21 +21,8 @@ main {
     flex: 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.card {
     @extend .mb-3;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @extend .mt-5;
 }
 
 .card-title {
@@ -54,7 +41,7 @@ h6 {
     @extend .mb-3, .row;
 
     .step-header {
-        @extend .col-2, .mx-3, .text-center, .text-white;
+        @extend .col-auto, .mx-3, .text-center, .text-white;
         background-color: $warning;
         border-radius: 100%;
         height: 3.5rem;
@@ -67,6 +54,6 @@ h6 {
     }
 
     .step-text {
-        @extend .col-10;
+        @extend .col;
     }
 }
