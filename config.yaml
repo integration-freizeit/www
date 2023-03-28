@@ -16,6 +16,13 @@ menu:
     - name: Vereine
       url: /vereine/
       weight: 2
+    - name: Freiwillige
+      url: /freiwillige/
+      weight: 3
     - name: Über uns
       url: /ueber-uns/
-      weight: 3
+      weight: 4
+    - name: Spenden
+      url: /spenden/
+      weight: 5
+
