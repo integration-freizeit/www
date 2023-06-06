@@ -25,4 +25,6 @@ menu:
     - name: Spenden
       url: /spenden/
       weight: 5
-
+    - name: News
+      url: /news/
+      weight: 6
