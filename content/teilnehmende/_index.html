@@ -209,8 +209,7 @@ layout: page
                 </div>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Deutsch Niveau A1, A2, B1, B2, C1 <span
-                        class="text-danger">*</span></label>
+                <label for="" class="form-label">Deutsch Niveau A1, A2, B1, B2, C1<span class="text-danger">*</span></label>
                 <input name="Deutsch Niveau" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
@@ -235,15 +234,18 @@ layout: page
                 </div>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">So habe ich über <b>Integration in der Freizeit</b> gehört (z.B.
-                    Name
-                    von
-                    Kollege/Kollegin, Organisationen etc.) <span class="text-danger">*</span></label>
-                <input name="referral" type="text" class="form-control" required>
-            </div>
-            <div class="visually-hidden">
-                <label for="" class="form-label">Kommentar</label>
-                <input name="kommentar" type="text" class="form-control">
+                <label class="form-label">So habe ich über <strong>Integration in der Freizeit</strong> gehört<span class="text-danger">*</span></label>
+                <select class="form-select" required>
+                    <option>Wähle eine Option</option>
+                    <option value="Dienstelle Asyl- und Flüchtlingswesen Luzern">Dienstelle Asyl- und Flüchtlingswesen Luzern</option>
+                    <option value="Anderes Sozialamt">Anderes Sozialamt</option>
+                    <option value="Hello Welcome">Hello Welcome</option>
+                    <option value="Lernatelier">Lernatelier</option>
+                    <option value="Sans Papiers">Sans Papiers</option>
+                    <option value="Sentitreff">Sentitreff</option>
+                    <option value="Andere Migrant*innen-Organisation">Andere Migrant*innen-Organisation</option>
+                    <option value="Empfehlung durch Freund*innen">Empfehlung durch Freund*innen</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Absenden</button>
         </form>
