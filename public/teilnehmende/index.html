@@ -217,75 +217,74 @@
 <div class="card bg-light mb-5 mx-md-5">
     <div class="card-body">
         <form name="Kontakt" method="POST" action="/kontakt/bestaetigung/" netlify-honeypot="kommentar" netlify>
-            <input type="hidden" name="subject" value="Kontaktandonefrage via integration-freizeit.ch" />
+            <input type="hidden" name="subject" value="Kontaktanfrage via integration-freizeit.ch" />
             <div class="row">
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Vorname<span class="text-danger">*</span></label>
+                    <label for="vorname" class="form-label">Vorname<span class="text-danger">*</span></label>
                     <input name="vorname" type="text" class="form-control" required>
                 </div>
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Nachname<span class="text-danger">*</span></label>
+                    <label for="nachname" class="form-label">Nachname<span class="text-danger">*</span></label>
                     <input name="nachname" type="text" class="form-control" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Geburtsdatum<span class="text-danger">*</span></label>
+                    <label for="geburtsdatum" class="form-label">Geburtsdatum<span class="text-danger">*</span></label>
                     <input name="geburtsdatum" type="text" class="form-control" required>
                 </div>
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Geschlecht<span class="text-danger">*</span></label>
+                    <label for="geschlecht" class="form-label">Geschlecht<span class="text-danger">*</span></label>
                     <input name="geschlecht" type="text" class="form-control" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Telefonnummer<span class="text-danger">*</span></label>
+                    <label for="telefonnummer" class="form-label">Telefonnummer<span class="text-danger">*</span></label>
                     <input name="telefonnummer" type="text" class="form-control" required>
                 </div>
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Email-Adresse<span class="text-danger">*</span></label>
+                    <label for="email" class="form-label">Email-Adresse<span class="text-danger">*</span></label>
                     <input name="email" type="email" class="form-control" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Herkunftsland<span class="text-danger">*</span></label>
+                    <label for="herkunftsland" class="form-label">Herkunftsland<span class="text-danger">*</span></label>
                     <input name="herkunftsland" type="text" class="form-control" required>
                 </div>
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Wohnort im Kanton Luzern<span class="text-danger">*</span></label>
+                    <label for="wohnort" class="form-label">Wohnort im Kanton Luzern<span class="text-danger">*</span></label>
                     <input name="wohnort" type="text" class="form-control" required>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Deutsch Niveau A1, A2, B1, B2, C1<span class="text-danger">*</span></label>
-                <input name="Deutsch Niveau" type="text" class="form-control" required>
+                <label for="deutsch-niveau" class="form-label">Deutsch Niveau A1, A2, B1, B2, C1<span class="text-danger">*</span></label>
+                <input name="deutsch-niveau" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Interessen, Freizeitaktivitäten<span
-                        class="text-danger">*</span></label>
+                <label for="interessen" class="form-label">Interessen, Freizeitaktivitäten<span class="text-danger">*</span></label>
                 <input name="interessen" type="text" class="form-control" required>
             </div>
             <div class="form-check mb-3">
-                <input name="kulturlegi" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input name="kulturlegi" class="form-check-input" type="checkbox" value="">
                 <label class="form-check-label" for="flexCheckDefault">
                     Ja, ich habe eine <a href="https://www.kulturlegi.ch">KulturLegi</a> Karte
                 </label>
             </div>
             <div class="row">
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">KulturLegi Karte Nummer<span class="text-danger"></span></label>
-                    <input name="KulturLegi Karte Nummer" type="text" class="form-control">
+                    <label for="kulturlegi-kartennummer" class="form-label">KulturLegi Kartennummer<span class="text-danger"></span></label>
+                    <input name="kulturlegi-kartennummer" type="text" class="form-control">
                 </div>
                 <div class="col-md mb-3">
-                    <label for="" class="form-label">Gültigkeitsdatum<span class="text-danger"></span></label>
-                    <input name="Gültigkeitsdatum" type="text" class="form-control">
+                    <label for="gültigkeitsdatum" class="form-label">Gültigkeitsdatum<span class="text-danger"></span></label>
+                    <input name="gültigkeitsdatum" type="text" class="form-control">
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">So habe ich über <strong>Integration in der Freizeit</strong> gehört<span class="text-danger">*</span></label>
-                <select class="form-select" required>
+                <label for="referenz" class="form-label">So habe ich über <strong>Integration in der Freizeit</strong> gehört<span class="text-danger">*</span></label>
+                <select name="referenz" class="form-select" required>
                     <option>Wähle eine Option</option>
                     <option value="Dienstelle Asyl- und Flüchtlingswesen Luzern">Dienstelle Asyl- und Flüchtlingswesen Luzern</option>
                     <option value="Anderes Sozialamt">Anderes Sozialamt</option>
