@@ -185,7 +185,12 @@ layout: page
                 </div>
                 <div class="col-md mb-3">
                     <label for="geschlecht" class="form-label">Geschlecht<span class="text-danger">*</span></label>
-                    <input name="geschlecht" type="text" class="form-control" required>
+                    <select name="geschlecht" class="form-select" required>
+                        <option disabled selected value="">Wähle eine Option.</option>
+                        <option value="weiblich">weiblich</option>
+                        <option value="männlich">männlich</option>
+                        <option value="andere">andere</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -211,7 +216,7 @@ layout: page
             <div class="mb-3">
                 <label for="deutsch-niveau" class="form-label">Deutsch-Niveau<span class="text-danger">*</span></label>
                 <select name="deutsch-niveau" class="form-select" required>
-                    <option>Wähle eine Option.</option>
+                    <option disabled selected value="">Wähle eine Option.</option>
                     <option value="A1">A1</option>
                     <option value="A2">A2</option>
                     <option value="B1">B1</option>
@@ -224,25 +229,25 @@ layout: page
                 <input name="interessen" type="text" class="form-control" required>
             </div>
             <div class="form-check mb-3">
-                <input name="kulturlegi" class="form-check-input" type="checkbox" value="">
-                <label class="form-check-label" for="flexCheckDefault">
+                <input id="kulturlegi-checkbox" name="kulturlegi" class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label" for="kulturlegi-checkbox">
                     Ja, ich habe eine <a href="https://www.kulturlegi.ch">KulturLegi</a> Karte
                 </label>
             </div>
-            <div class="row">
+            <div class="row" id="kulturlegi-fields" style="display: none;">
                 <div class="col-md mb-3">
-                    <label for="kulturlegi-kartennummer" class="form-label">KulturLegi Kartennummer<span class="text-danger"></span></label>
-                    <input name="kulturlegi-kartennummer" type="text" class="form-control">
+                    <label for="kulturlegi-kartennummer" class="form-label">KulturLegi Kartennummer<span class="text-danger">*</span></label>
+                    <input id="kulturlegi-kartennummer" name="kulturlegi-kartennummer" type="text" class="form-control">
                 </div>
                 <div class="col-md mb-3">
-                    <label for="gültigkeitsdatum" class="form-label">Gültigkeitsdatum<span class="text-danger"></span></label>
-                    <input name="gültigkeitsdatum" type="text" class="form-control">
+                    <label for="gültigkeitsdatum" class="form-label">Gültigkeitsdatum<span class="text-danger">*</span></label>
+                    <input id="gültigkeitsdatum" name="gültigkeitsdatum" type="text" class="form-control">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="referenz" class="form-label">So habe ich über <strong>Integration in der Freizeit</strong> gehört<span class="text-danger">*</span></label>
                 <select name="referenz" class="form-select" required>
-                    <option>Sie müssen eine Option auswählen.</option>
+                    <option disabled selected value="">Wähle eine Option.</option>
                     <option value="Dienstelle Asyl- und Flüchtlingswesen Luzern">Dienstelle Asyl- und Flüchtlingswesen Luzern</option>
                     <option value="Anderes Sozialamt">Anderes Sozialamt</option>
                     <option value="Hello Welcome">Hello Welcome</option>
@@ -255,15 +260,12 @@ layout: page
             </div>
             <button type="submit" class="btn btn-primary">Absenden</button>
         </form>
-        <p class="text-muted mt-3 mb-0">Eine von unseren Freiwilligen wird dich in der nächste Zeit kontaktieren und
+        <p class="text-muted mt-3 mb-0">Eine von unseren Freiwilligen wird dich in der nächsten Zeit kontaktieren und
             einen Termin mit dir abmachen. </p>
         <br>
-        <p> Unser Verein ist von Freiwilligen betrieben und wir sind während den Schulzeiten gerne für euch da!
-            Leider machen wir keine Termine während des Schulferiens ab (Viele Vereine/Freizeitgruppen treffen sich in
-            den Ferien auch nicht).</p>
-
-
-
+        <p> Unser Verein ist von Freiwilligen betrieben und wir sind während der Schulzeiten gerne für euch da!
+            Leider machen wir keine Termine während der Schulferien ab. (Viele Vereine/Freizeitgruppen treffen sich in
+            den Ferien auch nicht.)</p>
     </div>
 </div>
 
@@ -338,3 +340,22 @@ layout: page
         </div>
 
     </div>
+</div>
+
+<script>
+    document.getElementById('kulturlegi-checkbox').addEventListener('change', function() {
+        var kulturLegiFields = document.getElementById('kulturlegi-fields');
+        var kartennummer = document.getElementById('kulturlegi-kartennummer');
+        var gueltigkeitsdatum = document.getElementById('gültigkeitsdatum');
+        
+        if (this.checked) {
+            kulturLegiFields.style.display = 'flex';
+            kartennummer.required = true;
+            gueltigkeitsdatum.required = true;
+        } else {
+            kulturLegiFields.style.display = 'none';
+            kartennummer.required = false;
+            gueltigkeitsdatum.required = false;
+        }
+    });
+</script>
