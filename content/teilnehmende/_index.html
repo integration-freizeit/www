@@ -158,7 +158,8 @@ layout: page
 <ul class="mb-5">
     <li>Du musst über 19 Jahre alt sein.</li>
     <li>Du musst eine gültige Kulturlegikarte haben.</li>
-    <li>Du musst schon ein bisschen Deutsch sprechen (Niveau A1).</li>
+    <li>Du musst schon ein bisschen Deutsch sprechen (A1 Deutschprüfung bestanden).</li>
+    <li>Du musst dir vorstellen können, einen Abend in der Woche für die Freizeitaktivität freizuhalten.</li>
     <li>Du solltest ein Jahr beim Verein mitmachen. </li>
     <li>Teilnahme an den Austausch-Meetings und Abschluss-Treffen ist für alle Teilnehmenden Pflicht.</li>
 </ul>
@@ -200,36 +201,60 @@ layout: page
                     <label for="telefonnummer" class="form-label">Telefonnummer<span class="text-danger">*</span></label>
                     <input name="telefonnummer" type="text" class="form-control" required>
                 </div>
+
+                <div class="col-md mb-3">
+                    <label for="WhatsApp" class="form-label">WhatsApp-Nummer<span class="text-danger">*</span></label>
+                    <input name="WhatsApp" type="text" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-md mb-3">
                     <label for="email" class="form-label">Email-Adresse<span class="text-danger">*</span></label>
                     <input name="email" type="email" class="form-control" required>
                 </div>
-            </div>
-            <div class="row">
+
                 <div class="col-md mb-3">
                     <label for="herkunftsland" class="form-label">Herkunftsland<span class="text-danger">*</span></label>
                     <input name="herkunftsland" type="text" class="form-control" required>
                 </div>
-                <div class="col-md mb-3">
-                    <label for="wohnort" class="form-label">Wohnort im Kanton Luzern<span class="text-danger">*</span></label>
-                    <input name="wohnort" type="text" class="form-control" required>
-                </div>
             </div>
+
+
+            <div class="mb-3">
+                <label for="wohnort umgebung" class="form-label">Wohnort<span class="text-danger">*</span></label>
+                <select name="wohnort umgebung" class="form-select" required>
+                    <option disabled selected value="">Wähle einen Wohnort.</option>
+                    <option value="Luzern">Luzern</option>
+                    <option value="Littau">Littau</option>
+                    <option value="Emmen/-brücke">Emmen oder Emmenbrücke</option>
+                    <option value="Ebikon">Ebikon</option>
+                    <option value="Adligenswil">Adligenswil</option>
+                    <option value="Meggen">Meggen</option>
+                    <option value="Kriens">Kriens</option>
+                    <option value="Horw">Horw</option>
+                </select>
+            </div>
+
             <div class="mb-3">
                 <label for="deutsch-niveau" class="form-label">Deutsch-Niveau<span class="text-danger">*</span></label>
                 <select name="deutsch-niveau" class="form-select" required>
                     <option disabled selected value="">Wähle eine Option.</option>
-                    <option value="A1">A1 bestanden</option>
-                    <option value="A2">A2 bestanden</option>
-                    <option value="B1">B1 bestanden</option>
-                    <option value="B2">B2 bestanden</option>
-                    <option value="C1">C1 bestanden</option>
+                    <option value="A1">A1 Deutschprüfung bestanden</option>
+                    <option value="A2">A2 Deutschprüfung bestanden</option>
+                    <option value="B1">B1 Deutschprüfung bestanden</option>
+                    <option value="B2">B2 Deutschprüfung bestanden</option>
+                    <option value="C1">C1 Deutschprüfung bestanden</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="interessen" class="form-label">Interessen, Freizeitaktivitäten<span class="text-danger">*</span></label>
                 <input name="interessen" type="text" class="form-control" required>
             </div>
+
+
+
+
             <div class="form-check mb-3">
                 <input id="kulturlegi-checkbox" name="kulturlegi" class="form-check-input" type="checkbox" value="" required >
                 <label class="form-check-label" for="kulturlegi-checkbox">
@@ -364,4 +389,5 @@ layout: page
             gueltigkeitsdatum.required = false;
         }
     });
+
 </script>
