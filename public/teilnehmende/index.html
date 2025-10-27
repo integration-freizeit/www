@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49467&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Integration in der Freizeit</title>
@@ -206,12 +206,14 @@
 
 <h5>Was ist wichtig?</h5>
 <ul class="mb-5">
-    <li>Du musst über 19 Jahre alt sein.</li>
+    <li>Du musst mindestens 19 Jahre alt sein.</li>
+    <li>Du musst in Luzern oder der Agglomoration wohnen (ÖV Zone 10).</li>
     <li>Du musst eine gültige Kulturlegikarte haben.</li>
+    <li>Du musst WhatsApp haben.</li>
     <li>Du musst schon ein bisschen Deutsch sprechen (A1 Deutschprüfung bestanden).</li>
     <li>Du musst dir vorstellen können, einen Abend in der Woche für die Freizeitaktivität freizuhalten.</li>
     <li>Du solltest ein Jahr beim Verein mitmachen. </li>
-    <li>Teilnahme an den Austausch-Meetings und Abschluss-Treffen ist für alle Teilnehmenden Pflicht.</li>
+    <li>Du musst an unseren 3 Austausch-Treffen teilnehmen.</li>
 </ul>
 
 <h5>Wie mache ich mit?</h5>
@@ -246,32 +248,26 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md mb-3">
-                    <label for="telefonnummer" class="form-label">Telefonnummer<span class="text-danger">*</span></label>
-                    <input name="telefonnummer" type="text" class="form-control" required>
-                </div>
 
+            <div class="row">
                 <div class="col-md mb-3">
                     <label for="WhatsApp" class="form-label">WhatsApp-Nummer<span class="text-danger">*</span></label>
                     <input name="WhatsApp" type="text" class="form-control" required>
                 </div>
-            </div>
-
-            <div class="row">
                 <div class="col-md mb-3">
                     <label for="email" class="form-label">Email-Adresse<span class="text-danger">*</span></label>
                     <input name="email" type="email" class="form-control" required>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="col-md mb-3">
                     <label for="herkunftsland" class="form-label">Herkunftsland<span class="text-danger">*</span></label>
                     <input name="herkunftsland" type="text" class="form-control" required>
                 </div>
-            </div>
 
 
-            <div class="mb-3">
+                <div class="col-md mb-3">
                 <label for="wohnort umgebung" class="form-label">Wohnort<span class="text-danger">*</span></label>
                 <select name="wohnort umgebung" class="form-select" required>
                     <option disabled selected value="">Wähle einen Wohnort.</option>
@@ -284,6 +280,7 @@
                     <option value="Kriens">Kriens</option>
                     <option value="Horw">Horw</option>
                 </select>
+                </div>
             </div>
 
             <div class="mb-3">
@@ -355,8 +352,8 @@
 
 <div class="row mt-5 mb-4">
     <div class="col-md mb-3 text-center">
-        <img src="/teilnehmende-1a.jpg" class="img-fluid img-thumbnail">
-        <figcaption class="figure-caption">Löchlitramper Guggenmusig</figcaption>
+        <img src="/Vereine_Unterwasser-Rugby_WTC14_06_MG_9373.jpg" class="img-fluid img-thumbnail">
+        <figcaption class="figure-caption">Unterwasser Rugby Luzern</figcaption>
     </div>
     <div class="col-md mb-3 text-center">
         <img src="/teilnehmende-8.jpg" class="img-fluid img-thumbnail">
@@ -422,6 +419,9 @@
 
     </div>
 </div>
+
+
+
 
 <script>
     document.getElementById('kulturlegi-checkbox').addEventListener('change', function() {
